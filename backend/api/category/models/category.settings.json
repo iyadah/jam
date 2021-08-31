@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "unique": true,
+      "required": true
+    },
+    "filterOptions": {
+      "type": "json",
+      "required": true
+    },
+    "products": {
+      "via": "category",
+      "collection": "product"
+    }
+  }
+}

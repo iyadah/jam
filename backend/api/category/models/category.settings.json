@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "Category"
+    "name": "Category",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -22,7 +23,7 @@
     },
     "filterOptions": {
       "type": "json",
-      "required": true
+      "required": false
     },
     "products": {
       "via": "category",

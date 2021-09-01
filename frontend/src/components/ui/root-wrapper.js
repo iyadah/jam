@@ -1,5 +1,5 @@
 import React from "react"
-import { MuiThemeProvider, ThemeProvider } from "@material-ui/core/styles"
+import { ThemeProvider } from "@material-ui/core/styles"
 import theme from "./theme"
 export default ({ element }) => {
   return <ThemeProvider theme={theme}>{element}</ThemeProvider>

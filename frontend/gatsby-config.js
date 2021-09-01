@@ -16,7 +16,14 @@ module.exports = {
         collectionTypes: [`article`, `product`, `category`, `variant`],
       },
     },
-
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Droid Sans", "Droid Serif"],
+        },
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

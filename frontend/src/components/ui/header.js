@@ -13,6 +13,8 @@ import search from "../../images/search.svg"
 import cart from "../../images/cart.svg"
 import account from "../../images/account-header.svg"
 
+import { Link, navigate } from "gatsby"
+
 export default function header({ categories }) {
   const allTabs = [
     ...categories,
@@ -28,9 +30,18 @@ export default function header({ categories }) {
           {allTabs.map(tab => (
             <Tab label={tab.node.name} key={tab.node.strapiId} />
           ))}
-          <IconButton>
+          <IconButton
+            onClick={() => {
+              navigate("/search")
+            }}
+          >
             <img src={search} alt="Search" />
+          </IconButton>
+
+          <IconButton to="/cart" component={Link}>
             <img src={cart} alt="Cart" />
+          </IconButton>
+          <IconButton to="/account" component={Link}>
             <img src={account} alt="Account" />
           </IconButton>
         </Tabs>

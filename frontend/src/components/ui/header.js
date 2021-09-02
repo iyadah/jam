@@ -28,7 +28,12 @@ export default function header({ categories }) {
         </Button>
         <Tabs>
           {allTabs.map(tab => (
-            <Tab label={tab.node.name} key={tab.node.strapiId} />
+            <Tab
+              component={Link}
+              to={tab.node.link || `/${tab.node.name.toLowerCase()}`}
+              label={tab.node.name}
+              key={tab.node.strapiId}
+            />
           ))}
           <IconButton
             onClick={() => {

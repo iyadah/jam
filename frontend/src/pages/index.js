@@ -8,6 +8,10 @@ import PromotionalProducts from "../components/home/PromotionalProducts"
 const IndexPage = () => (
   <Layout>
     <HeroBlock />
+    <br />
+    <br />
+    <br />
+
     <PromotionalProducts />
   </Layout>
 )

@@ -3,10 +3,12 @@ import { Link } from "gatsby"
 
 import Layout from "../components/ui/layout"
 import Seo from "../components/ui/seo"
-
+import HeroBlock from "../components/home/HeroBlock"
+import PromotionalProducts from "../components/home/PromotionalProducts"
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <HeroBlock />
+    <PromotionalProducts />
   </Layout>
 )
 

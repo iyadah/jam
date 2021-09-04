@@ -16,10 +16,7 @@ import account from "../../images/account-header.svg"
 import { Link, navigate } from "gatsby"
 
 export default function header({ categories }) {
-  const allTabs = [
-    ...categories,
-    { node: { name: "Contact Us", strapiId: "xy" } },
-  ]
+  const allTabs = [...categories, { node: { name: "Contact", strapiId: "xy" } }]
   return (
     <AppBar color="transparent" elevation={0}>
       <Toolbar>
